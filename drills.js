@@ -49,4 +49,45 @@
 
 // arrayDoubleI([1,2,5]);
 
-//Comment
+//Reverse String
+//input 'hello'
+//output 'olleh'
+
+// function stringReverseR(word) {
+//   if (word === '') {
+//     return '';
+//   }
+
+//   const newChar = word[word.length-1];
+
+//   return newChar + stringReverseR(word.slice(0, -1));
+// }
+
+// stringReverseR('hello');
+
+// function stringReverseI(word) {
+//   let newWord = '';
+//   for(let i = word.length-1; i>=0 ; i--) {
+//     console.log(newWord.concat(word[i]));
+//   }
+//   return newWord;
+// }
+
+// stringReverseI('hello');
+
+
+
+//nth Triangular Number
+//input:  1, 2, 3, 4,  5,  6,  7,  8,  9
+//output: 1, 3, 6, 10, 15, 21, 28, 36, 45
+
+// function triNumberR(seq) {
+//   if (seq === 0) {
+//     return 0;
+//   }
+
+//   return seq + triNumberR(seq - 1);
+// }
+
+// console.log(triNumberR(9));
+
