@@ -90,4 +90,3 @@
 // }
 
 // console.log(triNumberR(9));
-
