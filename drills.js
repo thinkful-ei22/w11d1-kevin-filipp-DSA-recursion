@@ -123,6 +123,7 @@
 
 // binaryR(15);
 
+// Factorial
 // function factNum (num){
 //   if(num === 0){
 //     return 1;
@@ -132,13 +133,51 @@
 
 // factNum(6);
 
-//input east
-//output teas, tase, tsae, tsea, taes, tesa
+
+//Fibonacci
+
+// function fibonacci(num) {
+//   if(num === 1) {
+//     return 1;
+//   }
+//   if(num === 2) {
+//     return 1;
+//   }
+
+//   return fibonacci(num-1) + fibonacci(num-2);
+// }
+
+// console.log(fibonacci(14));
+
+
+// Anagram *UNFINISHED*
+//input ast
+//output east, eats, esat, esta, etas, and etsa
 // function anagramWord (word){
 //   if(word === ''){
 //     return '';
 //   }
-//   return word[0] ; 
+
+//   return word[0] + anagramWord(word.slice(1))
 // }
 
 // anagramWord('east');
+
+const animalHierarchy = [
+  {id: 'Animals', parent: null},
+  {id: 'Mammals', parent: 'Animals'},
+  {id: 'Dogs', parent:'Mammals' },
+  {id: 'Cats', parent:'Mammals' },
+  {id: 'Golden Retriever', parent: 'Dogs'},
+  {id: 'Husky', parent:'Dogs' },
+  {id: 'Bengal', parent:'Cats' }
+];
+
+// ==============================
+function traverse(animalHierarchy, parent) {
+  let node = {};
+  animalHierarchy.filter(item => item.parent === parent)
+    .forEach(item => node[item.id] = traverse(animalHierarchy, item.id));
+  return node;  
+}
+console.log(traverse(animalHierarchy, null));
