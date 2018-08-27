@@ -90,3 +90,55 @@
 // }
 
 // console.log(triNumberR(9));
+
+//string splitter
+//input 'hello world' with split(' ')
+//output ['hello', 'world']
+
+// function strSplitR (str, sep, curr=''){
+//   if(str === '' && curr === ''){
+//     return [];
+//   }
+//   if(str === '' && curr){
+//     return [curr];
+//   }
+//   if(str[0] !== sep){
+//     // console.log('');
+//     return [...strSplitR(
+//       str.slice(1), sep, curr + str[0])];
+//   } 
+//   return [curr, ...strSplitR(
+//     str.slice(1), sep, '')];
+// }
+
+// console.log(strSplitR('hello world', ' '));
+
+// function binaryR (num){
+//   if(num <= 0){
+//     return '';
+//   }
+//   const bStr = Math.floor(num%2);
+//   return binaryR(Math.floor(num/2 )) + bStr;
+// }
+
+// binaryR(15);
+
+// function factNum (num){
+//   if(num === 0){
+//     return 1;
+//   }
+//   return num * factNum(num - 1);
+// }
+
+// factNum(6);
+
+//input east
+//output teas, tase, tsae, tsea, taes, tesa
+// function anagramWord (word){
+//   if(word === ''){
+//     return '';
+//   }
+//   return word[0] ; 
+// }
+
+// anagramWord('east');
